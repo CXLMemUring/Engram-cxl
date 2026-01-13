@@ -27,7 +27,7 @@ from typing import List
 from dataclasses import dataclass, field
 import math
 
-## third-class
+## third-party
 from sympy import isprime
 import numpy as np
 import torch
@@ -324,7 +324,7 @@ class MultiHeadEmbedding(nn.Module):
         return output
     
 class Engram(nn.Module):
-    def __init__(self,layer_id):
+    def __init__(self, layer_id):
         super().__init__()
         self.layer_id = layer_id
         self.hash_mapping = NgramHashMapping(
